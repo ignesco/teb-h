@@ -1,0 +1,4 @@
+#!/bin/sh
+rm -r -f testArea/.teb
+rm -r -f testArea/proj1
+rm -r -f testArea/proj2
