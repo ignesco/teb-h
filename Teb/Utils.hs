@@ -25,13 +25,5 @@ existsInTree dir what = do
 			 	Nothing -> False
 				Just _ -> True
 
-checkDotTebDirExistence :: String -> Bool -> IO Bool
-checkDotTebDirExistence dir neededExistence = do
-			exists <- existsInTree dir coreDirectory
-			if exists == neededExistence then
-			   return exists
-			else
-			   error $ unwords ["The", coreDirectory, "fails the existence test, was expecting it", existenceSnip neededExistence, "in", dir]
-
 outputStrings :: [String] -> IO ()
 outputStrings = mapM_ putStrLn

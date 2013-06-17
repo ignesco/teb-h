@@ -5,9 +5,9 @@ import Teb.Consts (coreDirectory)
 import Teb.Git (gitFetch)
 import Teb.ManifestLocator (getManifestLocation)
 import Teb.ProjectDefinition (ProjectStatus(..), TebProject(..), loadTebProjectListFromManifest)
-import Teb.TebUtils (getTebProjectBase, onlyProjectsInState)
+import Teb.TebUtils (getTebProjectBase, onlyProjectsInState, checkDotTebDirExistence)
 import Teb.Types
-import Teb.Utils (outputStrings, checkDotTebDirExistence)
+import Teb.Utils (outputStrings)
 
 fetch :: CurrentWorkingDirectory -> Arguments -> IO ()
 fetch cwd args =

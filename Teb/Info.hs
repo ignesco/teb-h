@@ -4,9 +4,8 @@ import System.FilePath ((</>))
 import Teb.Consts (coreDirectory)
 import Teb.ManifestLocator (getManifestLocation)
 import Teb.ProjectDefinition (TebProject(..), loadTebProjectListFromManifest)
-import Teb.TebUtils (getTebProjectBase)
+import Teb.TebUtils (getTebProjectBase, checkDotTebDirExistence)
 import Teb.Types
-import Teb.Utils (checkDotTebDirExistence)
 
 info :: CurrentWorkingDirectory -> Arguments -> IO ()
 info cwd args = do

@@ -7,7 +7,7 @@ import Teb.Error (reportError)
 import Teb.Git (gitClone, gitCheckout)
 import Teb.ProjectDefinition
 import Teb.Types
-import Teb.TebUtils (cloneProject)
+import Teb.TebUtils (cloneProject, checkDotTebDirExistence)
 import Teb.Utils
 
 getInitArgs :: [String] -> Maybe (RemoteLocator, TebManifestFile)

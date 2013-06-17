@@ -13,7 +13,14 @@ getManifestLocation cwd = do
 		    ss <- runX $ (readDocument [] (getLocatorFile cwd)) >>> getLocatorText
 		    return $ head ss
 
+getManifestTebDirectory :: CurrentWorkingDirectory -> IO String
+getManifestTebDirectory cwd = do
+		    ss <- runX $ (readDocument [] (getLocatorFile cwd)) >>> getLocatorDirText
+		    return $ head ss
+
 getLocatorFile :: CurrentWorkingDirectory -> String
 getLocatorFile cwd = cwd </> coreDirectory </> manifestLocationFilename
 
 getLocatorText = getChildren >>> hasName "teb" >>> getChildren >>> hasName "TebManifestLocator" >>> getChildren >>> getText
+
+getLocatorDirText = getChildren >>> hasName "teb" >>> getChildren >>> hasName "TebManifestRepoDir" >>> getChildren >>> getText

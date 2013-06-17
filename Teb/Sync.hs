@@ -7,8 +7,8 @@ import Teb.Git (gitRebase)
 import Teb.ManifestLocator (getManifestLocation)
 import Teb.ProjectDefinition (ProjectStatus(..), TebProject(..), loadTebProjectListFromManifest)
 import Teb.Types
-import Teb.TebUtils (getTebProjectBase, onlyProjectsInState)
-import Teb.Utils (outputStrings, checkDotTebDirExistence)
+import Teb.TebUtils (getTebProjectBase, onlyProjectsInState, checkDotTebDirExistence)
+import Teb.Utils (outputStrings)
 
 sync :: CurrentWorkingDirectory -> Arguments -> IO ()
 sync cwd args = do
