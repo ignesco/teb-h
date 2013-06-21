@@ -1,6 +1,6 @@
 module Teb.Consts where
 
-version = "1.2.1"
+version = "1.2.2"
 versionDescription = "Teb repository manager (version " ++ version ++ ") (h)"
 coreDirectory = ".teb"
 manifestLocationFilename = "tebmanifestlocator.xml"
